@@ -16,6 +16,7 @@ public class StopwatchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
+        runTimer();
     }
 
     //Methods to start/stop/reset the stopwatch
@@ -52,6 +53,6 @@ public class StopwatchActivity extends AppCompatActivity {
                 }
                 handler.postDelayed(this, 1000);
             }
-        })
+        });
     }
 }
