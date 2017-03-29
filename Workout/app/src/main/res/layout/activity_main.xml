@@ -8,7 +8,16 @@
     tools:context="org.jlmarks.workout.MainActivity">
 
     <fragment
-        android:layout_width="match_parent"
+        class="org.jlmarks.workout.WorkoutListFragment"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:id="@+id/list_frag" />
+
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="match_parent"
         class="org.jlmarks.workout.WorkoutDetailFragment"
         android:id="@+id/detail_frag" />
