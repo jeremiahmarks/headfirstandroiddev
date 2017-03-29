@@ -14,10 +14,13 @@ import android.widget.TextView;
 public class WorkoutDetailFragment extends Fragment {
     private long workoutId;
 
-
-//    public WorkoutDetailFragment() {
-//        // Required empty public constructor
-//    }
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            workoutId = savedInstanceState.getLong("workoutId");
+        }
+    }
 
 
     @Override
@@ -38,6 +41,11 @@ public class WorkoutDetailFragment extends Fragment {
             TextView description = (TextView) view.findViewById(R.id.textDescription);
             description.setText(workout.getDescription());
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        savedInstanceState.putLong("workoutId", workoutId);
     }
 
     public void setWorkout(long id){
