@@ -1,6 +1,7 @@
 package org.jlmarks.workout;
 
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,6 +20,13 @@ public class WorkoutDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             workoutId = savedInstanceState.getLong("workoutId");
+        } else {
+            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+            StopwatchFragment stopwatchFragment = new StopwatchFragment();
+            ft.replace(R.id.stopwatch_container, stopwatchFragment);
+            ft.addToBackStack(null);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.commit();
         }
     }
 
