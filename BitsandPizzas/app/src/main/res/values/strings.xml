@@ -4,4 +4,26 @@
     <string name="action_create_order">Create Order</string>
     <string name="order_activity_name">Create Order</string>
     <string name="action_share">Share</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_top">Top Fragment</string>
+    <string-array name="pizzas">
+        <item>Hot and Meaty</item>
+        <item>Hot and Sweet</item>
+    </string-array>
+    <string-array name="pasta">
+        <item>Pasgetti</item>
+        <item>Lazagna</item>
+    </string-array>
+    <string-array name="stores">
+        <item>Mesa</item>
+        <item>Scottsdale</item>
+    </string-array>
+    <string-array name="titles">
+        <item>Home</item>
+        <item>Pizzas</item>
+        <item>Pasta</item>
+        <item>Stores</item>
+    </string-array>
 </resources>
